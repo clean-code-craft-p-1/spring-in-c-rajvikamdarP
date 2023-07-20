@@ -1,7 +1,7 @@
 
 // define the Stats structure here. See the tests to infer its properties
 // define the Stats structure here. See the tests to infer its properties
-typedef struct
+struct
 {
         float average;
         float max;
