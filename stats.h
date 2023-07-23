@@ -16,6 +16,6 @@ bool LedAlertOn = FALSE;
 typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats);
 //Function for LedAlerter
-void LedAlertOn(void);
+void emailAlerter(void);
 //Function for Email Alert sent
-void emailAlertSent(void);
+void ledAlerter(void);
