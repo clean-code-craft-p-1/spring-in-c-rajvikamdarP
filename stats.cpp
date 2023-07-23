@@ -60,7 +60,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
 
     for(i=0; i<setlength; i++)
     {
-            sum = numberset[i];
+            sum += numberset[i];
 
     }
     s.average = sum/setlength;
