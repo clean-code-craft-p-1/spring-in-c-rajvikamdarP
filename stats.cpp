@@ -83,14 +83,11 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats compu
 {
     int i=0;
     bool result = false;
-    if(&computedStats != NULL)
+    if(computedStats.max > maxThreshold)
     {
-        if(computedStats.max > maxThreshold)
+        for(i=0; i<=2; i++)
         {
-            for(i=0; i<=2; i++)
-                {
-                    (*alerters[i])();
-                }
+            (*alerters[i])();
         }
     }
 }
