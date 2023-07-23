@@ -67,13 +67,13 @@ Stats compute_statistics(const float* numberset, int setlength) {
 //Turning the LED on
 void emailAlerter(void)
 {
-   EmailAlertSent.emailAlertSent = true;
+   Emailsent.emailAlertSent = true;
 }
 
 // Email alert sent
 void ledAlerter(void)
 {
-    LedAlertSent.ledAlertOn = true;
+    LedOn.ledAlertOn = true;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
