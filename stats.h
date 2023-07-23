@@ -11,9 +11,9 @@ typedef struct
 Stats compute_statistics(const float* numberset, int setlength);
 
 // If the email Alert has been sent
-bool emailAlertSent = FALSE;
+bool emailAlertSent = false;
 // If the led has turned on
-bool LedAlertOn = FALSE;
+bool LedAlertOn = false;
 
 typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats);
