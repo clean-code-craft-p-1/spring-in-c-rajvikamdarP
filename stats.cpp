@@ -9,7 +9,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
     s.min = 0;
     s.max = 0;
     int i = 0;
-    int sum = 0;
+    float sum = 0.0;
 
     if(0 == setlength%2)
     {
@@ -63,7 +63,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
             sum += numberset[i];
 
     }
-    s.average = sum/setlength;
+    s.average = sum/(float)setlength;
     return s;
 }
 
