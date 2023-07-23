@@ -34,6 +34,6 @@ TEST(Alert, AlertsWhenMaxExceeds) {
     const float maxThreshold = 10.2;
     check_and_alert(maxThreshold, alerters, computedStats);
     
-    EXPECT_TRUE(emailAlertSent);
-    EXPECT_TRUE(LedAlertOn);
+    EXPECT_TRUE(EmailAlertSent.emailAlertSent);
+    EXPECT_TRUE(LedAlertSent.ledAlertOn);
 }
