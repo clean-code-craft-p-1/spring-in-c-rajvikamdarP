@@ -25,7 +25,7 @@ TEST(Statistics, AverageNaNForEmpty) {
 }
 
 TEST(Alert, AlertsWhenMaxExceeds) {
-    alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
+    alerter_funcptr alerters[1] = {emailAlerter, ledAlerter};
     
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
