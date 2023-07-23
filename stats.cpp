@@ -1,7 +1,5 @@
 #include "stats.h"
 
-LedAlertOn = false;
-emailAlertSent = false;
 Stats compute_statistics(const float* numberset, int setlength) {
     Stats s;
     s.average = 0;
@@ -67,29 +65,32 @@ Stats compute_statistics(const float* numberset, int setlength) {
 }
 
 //Turning the LED on
-void emailAlerter(void)
+bool emailAlerter(void)
 {
-    //LED ON
-   LedAlertOn = true;
+   EmailAlertSent e = {};
+   e.emailAlertSent = true;
+    return e.emailAlertSent;
 }
 
 // Email alert sent
-void ledAlerter(void)
+bool ledAlerter(void)
 {
-    //Email Alert Sent
-    emailAlertSent = true;
+     LedAlertSent led = {};
+    led.ledAlertOn = true;
+    return led.ledAlertOn;
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
 {
     int i=0;
+    bool result = false;
     if(&computedStats != NULL)
     {
         if(computedStats.max > maxThreshold)
         {
             for(i=0; i<=2; i++)
                 {
-                    alerters[i]();
+                    result = alerters[i]();
                 }
         }
     }
