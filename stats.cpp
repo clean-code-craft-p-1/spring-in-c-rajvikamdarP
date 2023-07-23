@@ -81,7 +81,7 @@ void ledAlerter(void)
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
 {
     int i=0;
-    if(computedStats != 0)
+    if(&computedStats != NULL)
     {
         if(computedStats.max > maxThreshold)
         {
