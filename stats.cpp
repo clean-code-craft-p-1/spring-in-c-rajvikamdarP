@@ -1,5 +1,7 @@
 #include "stats.h"
 
+LedAlertOn = false;
+emailAlertSent = false;
 Stats compute_statistics(const float* numberset, int setlength) {
     Stats s;
     s.average = 0;
