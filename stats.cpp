@@ -65,7 +65,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
 }
 
 //Turning the LED on
-bool emailAlerter(void)
+void emailAlerter(void)
 {
    EmailAlertSent e = {};
    e.emailAlertSent = true;
@@ -73,7 +73,7 @@ bool emailAlerter(void)
 }
 
 // Email alert sent
-bool ledAlerter(void)
+void ledAlerter(void)
 {
      LedAlertSent led = {};
     led.ledAlertOn = true;
