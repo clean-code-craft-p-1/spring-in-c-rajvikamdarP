@@ -1,5 +1,8 @@
 #include "stats.h"
 
+EmailAlertSent Emailsent;
+LedAlertSent LedOn;
+
 Stats compute_statistics(const float* numberset, int setlength) {
     Stats s;
     s.average = 0;
@@ -67,14 +70,12 @@ Stats compute_statistics(const float* numberset, int setlength) {
 //Turning the LED on
 void emailAlerter(void)
 {
-   EmailAlertSent Emailsent;
    Emailsent.emailAlertSent = true;
 }
 
 // Email alert sent
 void ledAlerter(void)
 {
-    LedAlertSent LedOn;
     LedOn.ledAlertOn = true;
 }
 
