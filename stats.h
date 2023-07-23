@@ -15,12 +15,14 @@ typedef struct
 {
         bool emailAlertSent;
 }EmailAlertSent;
+EmailAlertSent Emailsent;
 
 // If the led has turned on
 typedef struct
 {
         bool ledAlertOn;
 }LedAlertSent;
+LedAlertSent LedOn;
 
 typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats);
