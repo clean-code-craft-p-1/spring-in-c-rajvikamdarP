@@ -25,6 +25,6 @@ typedef struct
 typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats);
 //Function for LedAlerter
-bool emailAlerter(void);
+void emailAlerter(void);
 //Function for Email Alert sent
-bool ledAlerter(void);
+void ledAlerter(void);
