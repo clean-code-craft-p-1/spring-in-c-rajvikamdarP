@@ -79,7 +79,7 @@ void ledAlerter(void)
     LedOn.ledAlertOn = true;
 }
 
-void check_and_alert(float maxThreshold, void(*alerter_functptr[])(), Stats computedStats)
+void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
 {
     int i=0;
     bool result = false;
