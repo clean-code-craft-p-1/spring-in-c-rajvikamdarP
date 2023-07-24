@@ -15,6 +15,7 @@ Stats compute_statistics(const float* numberset, int setlength) {
         s.average = NAN;
         s.min = NAN;
         s.max = NAN;
+        return s;
     }
 
     if(0 == setlength%2)
