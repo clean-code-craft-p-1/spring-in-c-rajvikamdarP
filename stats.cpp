@@ -87,7 +87,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats compu
     {
         for(i=0; i<=2; i++)
         {
-            (alerter_functptr[i])();
+            (alerters[i])();
         }
     }
 }
