@@ -93,14 +93,14 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats compu
 {
     int i=0;
     bool result = false;
-    alerters[0] = ledAlerter;
-    alerters[1] = emailAlerter;
+    void (*alerter_funcptr[2])() = {ledAlerter, emailAlerter};
     if(computedStats.max > maxThreshold)
     {
         printf("inside max threshold\n");
         for(i=0; i<2; i++)
         {
-            (alerters[i]);
+            //alerters[i]);
+            (*alerter_funcptr[i])();
         }
     }
 }
