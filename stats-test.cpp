@@ -25,14 +25,14 @@ TEST(Statistics, AverageNaNForEmpty) {
 }
 
 TEST(Alert, AlertsWhenMaxExceeds) {
-    void (*alerter_funcptr[2])() = {emailAlerter, ledAlerter};
+    alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
     
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     Stats computedStats = compute_statistics(numberset, setlength);
 
     const float maxThreshold = 10.2;
-    check_and_alert(maxThreshold, (*alerter_functptr[]), computedStats);
+    check_and_alert(maxThreshold, alerters, computedStats);
     
     EXPECT_EQ(true, Emailsent.emailAlertSent);
     EXPECT_EQ(true, LedOn.ledAlertOn);
