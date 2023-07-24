@@ -17,9 +17,8 @@ TEST(Statistics, ReportsAverageMinMax) {
 
 TEST(Statistics, AverageNaNForEmpty) {
     Stats computedStats = compute_statistics(0, 0);
-    //All fields of computedStats (average, max, min) must be
-    //NAN (not-a-number), as defined in math.h
-    
+
+    // Checking if sent as not a number
     EXPECT_TRUE(std::isnan(computedStats.average));
     EXPECT_TRUE(std::isnan(computedStats.min));
     EXPECT_TRUE(std::isnan(computedStats.max));
@@ -35,6 +34,6 @@ TEST(Alert, AlertsWhenMaxExceeds) {
     const float maxThreshold = 10.2;
     check_and_alert(maxThreshold, alerters, computedStats);
     
-   // EXPECT_EQ(true, Emailsent.emailAlertSent);
-   // EXPECT_EQ(true, LedOn.ledAlertOn);
+    EXPECT_EQ(true, Emailsent.emailAlertSent);
+    EXPECT_EQ(true, LedOn.ledAlertOn);
 }
