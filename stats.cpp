@@ -97,6 +97,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats compu
     alerters[1] = ledAlerter;
     if(computedStats.max > maxThreshold)
     {
+        printf("inside max threshold\n");
         for(i=0; i<=2; i++)
         {
             (alerters[i]);
