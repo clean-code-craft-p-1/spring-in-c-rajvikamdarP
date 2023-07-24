@@ -10,6 +10,12 @@ Stats compute_statistics(const float* numberset, int setlength) {
     s.max = 0;
     int i = 0;
     float sum = 0.0;
+    if(numberset == NULL)
+    {
+        s.average = NAN;
+        s.min = NAN;
+        s.max = NAN;
+    }
 
     if(0 == setlength%2)
     {
