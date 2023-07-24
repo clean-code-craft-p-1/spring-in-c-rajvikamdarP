@@ -89,11 +89,10 @@ void ledAlerter(void)
     LedOn.ledAlertOn = true;
 }
 
-void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats computedStats)
+void check_and_alert(float maxThreshold, void (*alerter_funcptr[])(), Stats computedStats)
 {
     int i=0;
     bool result = false;
-    void (*alerter_funcptr[2])() = {ledAlerter, emailAlerter};
     if(computedStats.max > maxThreshold)
     {
         printf("inside max threshold\n");
