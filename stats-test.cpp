@@ -20,8 +20,9 @@ TEST(Statistics, AverageNaNForEmpty) {
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
     
-    //Design the EXPECT statement here.
-    //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
+    EXPECT_TRUE(std::isnan(computedStats.average));
+    EXPECT_TRUE(std::isnan(computedStats.min));
+    EXPECT_TRUE(std::isnan(computedStats.max));
 }
 
 TEST(Alert, AlertsWhenMaxExceeds) {
