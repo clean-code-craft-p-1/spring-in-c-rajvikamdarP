@@ -78,12 +78,14 @@ Stats compute_statistics(const float* numberset, int setlength) {
 //Turning the LED on
 void emailAlerter(void)
 {
+    printf("inside 1\n");
    Emailsent.emailAlertSent = true;
 }
 
 // Email alert sent
 void ledAlerter(void)
 {
+    printf("inside 2\n");
     LedOn.ledAlertOn = true;
 }
 
