@@ -91,7 +91,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], Stats compu
 {
     int i=0;
     bool result = false;
-    printf("")
+    printf("computedStats.max: %u\n", computedStats.max);
     if(computedStats.max > maxThreshold)
     {
         for(i=0; i<=2; i++)
