@@ -24,7 +24,7 @@ typedef struct
 }LedAlertSent;
 extern LedAlertSent LedOn;
 
-void (*alerter_funcptr)();
+typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, void (*alerter_funcptr[])(), Stats computedStats);
 //Function for LedAlerter
 void emailAlerter(void);
