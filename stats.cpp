@@ -1,4 +1,5 @@
 #include "stats.h"
+#include <cmath>
 
 EmailAlertSent Emailsent;
 LedAlertSent LedOn;
